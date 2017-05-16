@@ -30,7 +30,7 @@ whatever other files you have open.
 
 *** Evil + zsh means you no longer need tmux.
 The following lines have replicated 95% of the functionality I ever
-need tmux for.
+need from tmux.
 
 #+begin_src elisp
 (global-set-key (kbd "C-j") 'windmove-down)
@@ -51,5 +51,11 @@ ascii tables, great outlining tools, and more. I'm pretty new to
 org-mode still, but it's easy enough to get started.
 
 *** The list goes on and on.
+Magit is a pretty stellar git tool. Org-journal is a nice tool for
+journaling in org-mode, if you're into that sort of
+thing. 'fill-paragraph' is a LaTeX enviornment-aware tool that far
+outstrips vim's gq, in my opinion. Ido is a pretty great completion
+engine that includes fuzzy searching. It can also be used for history
+search in eshell.
 
 ** Switching from vim
