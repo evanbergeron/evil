@@ -58,4 +58,13 @@ outstrips vim's gq, in my opinion. Ido is a pretty great completion
 engine that includes fuzzy searching. It can also be used for history
 search in eshell.
 
-** Switching from vim
+** Building your own vim-centric emacs config
+We'll walk through the construction of a simple vim-centric emacs
+configuration, including replicating (or enhancing) the behavior of
+popular vim plugins.
+
+If your favorite vim plugin is missing from this list, don't hesitate
+to submit a pull request!
+   
+*** Replacing vanilla vim
+*** Replacing vim plugins 
