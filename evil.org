@@ -1,0 +1,55 @@
+* Take me to your Evil Leader
+  
+** Why switch?
+*** Many vim plugins are hacky.
+If you're using more than a dozen plugins for your vim setup, you
+should switch to emacs. At this point, vim is no longer the minimal,
+simple machine it is intended to be. Most of the functionality you're
+striving for can be achieved more naturally in emacs.
+
+*** Evil mode is pretty fucking good.
+gUi( works out of the box. So do sp, vs, and C-w {h,j,k,l}. C-a and
+C-x don't, but the following lines fix that problem:
+
+#+begin_src elisp
+(require 'evil-numbers)
+(define-key evil-normal-state-map (kbd "C-a") 'evil-numbers/inc-at-pt)
+(define-key evil-normal-state-map (kbd "C-x") 'evil-numbers/dec-at-pt)
+#+end_src
+
+*** Evil + zsh is so much better than zsh's vi-mode.
+Zsh's vim emulation is pretty bad. vi-mode doesn't define the text
+object i( by default; instead, these objects are presented in the
+shell function 'select-bracketed.' Last summer, I made an effort to
+add a couple text objects to zsh. Have you tried grepping that
+codebase for the word 'thingy?'
+
+By comparison, emacs can open zsh in a split and seamlessly copy/paste
+between the shell buffer and whatever other files you have ope and
+whatever other files you have open.
+
+*** Evil + zsh means you no longer need tmux.
+The following lines have replicated 95% of the functionality I ever
+need tmux for.
+
+#+begin_src elisp
+(global-set-key (kbd "C-j") 'windmove-down)
+(global-set-key (kbd "C-k") 'windmove-up)
+(global-set-key (kbd "C-h") 'windmove-left)
+(global-set-key (kbd "C-l") 'windmove-right)
+#+end_src
+
+*** No one should have to write vimscript in 2017.
+Neovim recently pushed Lua support, I believe. Lots of effort has been
+spent getting python to interface with vimscript nicely. Writing
+non-trivial logic to adjust vim behavior is still a pain.
+
+*** Org-mode.
+I'm writing this document in org-mode. There's lots to be said here,
+but the tldr is that org-mode is pretty dope. Automatically-adjusting
+ascii tables, great outlining tools, and more. I'm pretty new to
+org-mode still, but it's easy enough to get started.
+
+*** The list goes on and on.
+
+** Switching from vim
